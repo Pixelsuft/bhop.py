@@ -35,7 +35,12 @@ def print_logo():
     print('\033[2J', end='')
     print('\n' * int(term_size[1] / 2 - len(text_to_print) / 2), end='')
     for i in text_to_print:
-        print(' ' * int(term_size[0] / 2 - len(text_to_print[0]) / 2) + i.replace('0', f'{fore.BLACK}{back.GREEN} {style.RESET_ALL}'))
+        print(
+            ' ' * int(
+                term_size[0] / 2 - len(text_to_print[0]) / 2
+            ) + i.replace('0', f'{fore.BLACK}{back.GREEN} {style.RESET_ALL}')
+        )
+    print('\n' * int(term_size[1] / 2 - len(text_to_print) / 2), end='')
 
 
 def mainloop():
