@@ -10,7 +10,7 @@ unbind space
 bind mwheeldown +jump
 ```
 # Custom bhop bind
-line 18 - ```bunny_hop_key = YOUR-KEY```<br/>
+Line 18 - ```bunny_hop_key = YOUR-KEY```<br/>
 [Keys](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)<br/>
 For example, ```bunny_hop_key = 0x0D #  Enter```
 # Fast?
