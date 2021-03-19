@@ -4,7 +4,7 @@ Bunnyhop Python Script
  - Unbind jump on spacebar<br />
  - Bind jump down mouse whell<br />
  - ```game_window = 'Your Game Window Name'```<br />
-CSGO Example:<br />
+CSGO developer console Example:<br />
 ```
 unbind space
 bind mwheeldown +jump
