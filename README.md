@@ -9,6 +9,10 @@ CSGO developer console Example:<br />
 unbind space
 bind mwheeldown +jump
 ```
+# Custom bhop bind
+line 18 - ```bunny_hop_key = YOUR-KEY```<br/>
+[Keys](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)<br/>
+For example, ```bunny_hop_key = 0x0D  #Enter```
 # Fast?
 Yes, but:<br />
 ![Memory](https://user-images.githubusercontent.com/68371847/111786410-57b5e880-88f0-11eb-8e49-ecc449440521.png)
