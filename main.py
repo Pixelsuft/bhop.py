@@ -5,6 +5,7 @@ from win32gui import GetForegroundWindow as GetCurrentWindow
 from pyautogui import scroll as scroll_mouse
 from ctypes import windll as windows_dll
 from os import system as cmd_run
+from os import get_terminal_size as get_size
 from colorama import init as colorama_init
 from colorama import Fore as fore
 from colorama import Back as back
@@ -24,12 +25,17 @@ cmd_run('color 0a')
 
 def print_logo():
     colorama_init(autoreset=True)
-    print('''
+    term_size = get_size()
+    text_to_print = '''
 00000  0    0 000000 000000    000000 0    0
 0    0 0    0 0    0 0    0    0    0  0  0
 00000  000000 0    0 000000    000000   00
 0    0 0    0 0    0 0         0        0
-00000  0    0 000000 0      0  0       0'''[1:].replace('0', f'{fore.BLACK}{back.GREEN} {style.RESET_ALL}'), end='')
+00000  0    0 000000 0      0  0       0'''[1:].split('\n')
+    print('\033[2J', end='')
+    print('\n' * int(term_size[1] / 2 - len(text_to_print) / 2), end='')
+    for i in text_to_print:
+        print(' ' * int(term_size[0] / 2 - len(text_to_print[0]) / 2) + i.replace('0', f'{fore.BLACK}{back.GREEN} {style.RESET_ALL}'))
 
 
 def mainloop():
@@ -54,4 +60,5 @@ if __name__ == '__main__':
     del fore
     del back
     del style
+    del get_size
     mainloop()
