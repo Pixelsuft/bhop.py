@@ -1,5 +1,8 @@
 # bhop.py
 Bunnyhop Python Script
+# Requirements
+ - pywin32<br />
+ - colorama
 # Not Works?
  - Unbind jump on spacebar<br />
  - Bind jump on down mouse whell<br />
